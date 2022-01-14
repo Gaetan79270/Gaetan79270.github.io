@@ -1,0 +1,22 @@
+{
+  "name": "oh_my_food_p3",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaetan79270/Oh_My_Food.git"
+  },
+  "author": "Gaëtan Leroy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaetan79270/Oh_My_Food/issues"
+  },
+  "homepage": "https://github.com/Gaetan79270/Oh_My_Food#readme",
+  "devDependencies": {
+    "sass": "^1.48.0"
+  }
+}
