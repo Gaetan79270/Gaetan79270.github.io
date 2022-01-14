@@ -1,0 +1,25 @@
+.research{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    padding: 15px;
+    gap: 15px;
+    & .research_icon{
+        color: #444444;
+    }
+    & input{
+        background-color: #f3f3f3;
+        color: #444444;
+        border: none;
+        width: 148px;
+        line-height: 30px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+input::placeholder{
+    color: #444444;
+    padding-left: 5px;
+}
