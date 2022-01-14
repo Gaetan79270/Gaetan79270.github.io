@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8e43f8921a.js" crossorigin="anonymous"></script>
     <title>Oh my Food</title>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -11,5 +12,15 @@
     <header>
         <h1>ohmyfood</h1>
     </header>
+    <main>
+        <div class="research"><!--bloc de recherche-->
+            <div class="research_icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <form method="post" action="traitement.php"><!--traitement/php n'existe pas vraiment, c'est la base de donné en backend-->
+                <input type="search" name="research" placeholder="Paris, Belleville" maxlength="30"/>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
