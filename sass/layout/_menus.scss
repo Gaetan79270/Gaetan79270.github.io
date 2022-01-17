@@ -1,0 +1,79 @@
+@import "../utils/_mixins.scss";
+@import "../utils/variables.scss";
+
+
+.restaurants{
+    background-color: #f6f6f6;
+    margin-top: 70px;
+    width: 100%;
+    & h2{
+        font-weight: 800;
+        margin-left: 25px;
+        padding-top: 50px;
+    }
+    & .restaurants_list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 20px;
+        flex-wrap: wrap;
+        @media screen and (min-width: 991px){
+            flex-direction: row;
+            column-gap: 70px;
+        }
+        & .new{
+            position: relative;
+        }
+        & .new::before{
+            content: "Nouveau";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            background-color: $color_tertiary;
+            color: darken($color_tertiary, 45%);
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+    }
+    & .restaurant__card{
+        border-radius: 20px;
+        overflow: hidden;
+        height: 220px;
+        @include base_shadow;;
+        @media screen and (min-width: 991px){
+        flex: 1 1 45%;
+        &:hover{
+            @include zoom;
+        }
+        }
+        & .card__image{
+            min-height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+        @for $i from 1 through 4{
+            & .card__image_#{$i}{
+                background-image: url("../../assets/menu_#{$i}.jpg");
+            }
+        }
+        & .card__description{
+            position: relative;
+            & h3{
+                margin: 10px 0px 10px 12px;
+            }
+            & p{
+                margin-left: 12px;
+            }
+            & i{
+                position: absolute;
+                top: 8px;
+                right: 30px;
+                font-size: 35px;
+            }
+        }
+    }
+    
+}
+
