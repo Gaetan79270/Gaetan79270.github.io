@@ -1,0 +1,58 @@
+@import "../utils/_mixins.scss";
+@import "../utils/variables.scss";
+
+.functioning{
+    counter-reset: steps;
+    & h2{
+        font-weight: 800;
+        margin-left: 25px;
+    }
+    & ol{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0px;
+        margin: 15px;
+        @media screen and (min-width: 991px){
+            flex-direction: row
+        }
+        
+    }
+    & li{
+        position: relative;
+        counter-increment: steps;
+        flex-grow: 1;
+        padding: 16px 0px;
+        margin: 15px;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 19px;
+        list-style-type: none;
+        @include base_shadow;
+        & i{
+            color: #747474;
+            margin: 10px;
+            padding: 0px 10px 0px 20px;
+            font-size: 20px;
+            &:hover{
+                color: $color_primary; //A voir avec Guillaume
+            }
+        }
+        &:hover{
+            @include zoom;
+        }
+        &::before{
+            content: "" counter(steps);
+            color:white;
+            background-color: $color_primary;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 23px;
+            left: -10px;
+        }
+    }
+}
