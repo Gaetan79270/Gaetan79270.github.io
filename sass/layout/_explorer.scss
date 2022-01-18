@@ -19,7 +19,7 @@
         padding: 15px 25px;
         border: none;
         border-radius: 30px;
-        background-image: linear-gradient(350deg, $color_primary, $color_secondary );
+        @include gradient;
         @include base-shadow;
         &:hover{
             @include zoom;

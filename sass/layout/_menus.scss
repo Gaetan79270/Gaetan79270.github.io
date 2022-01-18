@@ -43,7 +43,7 @@
         border-radius: 20px;
         overflow: hidden;
         height: 220px;
-        @include base_shadow;;
+        @include base_shadow;
         &:hover{
             @include zoom;
         }
@@ -74,6 +74,18 @@
                 top: 8px;
                 right: 30px;
                 font-size: 35px;
+            }
+            & .fas{
+                color: transparent;
+                @include gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+            }
+            &:hover .fas{
+                opacity: 1;
+                transform: scale(1.1);
             }
         }
     }
