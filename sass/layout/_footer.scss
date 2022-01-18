@@ -1,0 +1,38 @@
+@import "../utils/variables.scss";
+
+footer{
+    background-color: $color_footer;
+    & .footend{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color:white;
+        padding: 0px 0px 30px 20px;
+        font-size: 19px;
+        @media screen and (min-width: 991px){
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 70px;
+            padding: 20px 0px 60px 0px ;
+        }
+        & span{
+            font-weight: 700;
+        }  
+        & .fa-utensils{
+            margin-right: 14px;
+        }
+        & .fa-hands-helping{
+            margin-right: 5px;
+        }
+    }     
+    & h2{
+        font-family: 'Shrikhand', cursive;
+        color:white;
+        font-weight: 500;
+        margin: 0px;
+        padding: 40px;
+        @media screen and (min-width: 991px){
+            text-align: center;
+        }
+    }
+}

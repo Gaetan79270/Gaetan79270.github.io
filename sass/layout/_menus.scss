@@ -5,6 +5,7 @@
 .restaurants{
     background-color: #f6f6f6;
     margin-top: 70px;
+    padding-bottom: 90px;
     width: 100%;
     & h2{
         font-weight: 800;
@@ -38,15 +39,17 @@
         }
     }
     & .restaurant__card{
+        background-color: white;
         border-radius: 20px;
         overflow: hidden;
         height: 220px;
         @include base_shadow;;
-        @media screen and (min-width: 991px){
-        flex: 1 1 45%;
         &:hover{
             @include zoom;
         }
+        @media screen and (min-width: 991px){
+        flex: 1 1 45%;
+        
         }
         & .card__image{
             min-height: 150px;
