@@ -4,12 +4,13 @@
 .image__menu img{
     display: block;
     width: 100%;
-    height: 70vh;
+    height: 55vh;
     object-fit: cover;
     object-position: center;
 }
 
 .menu_list{
+    background-color: #f3f3f3;
     & .menu_list__title{
         display: flex;
         position: relative;
@@ -36,6 +37,48 @@
             &:hover{
                 opacity: 1;
                 transform: scale(1.1);
+            }
+        }
+    }
+    & .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        @media screen and (min-width: 991px){
+            flex-direction: row;
+        }        
+        & .menu__flex {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 25px;
+            & h3{
+                font-weight: 200;
+            }
+            & .menu_item{
+                display: flex;
+                background-color: white;
+                border-radius: 20px;
+                align-items:flex-end;
+                @include base_shadow;
+                &:hover{
+                   //l'animation
+                }
+                & .menu_item__content{
+                    padding:10px;
+                    & h4{
+                        font-weight: 600;
+                        padding-bottom: 7px;
+                    }
+                    & p{
+                        font-size: 12px;
+                    }
+                }
+                & .menu_item__price{
+                    margin: 10px 20px 10px auto;
+                    font-weight: 900;
+                }
             }
         }
     }
