@@ -58,7 +58,7 @@
         }
         @for $i from 1 through 4{
             & .card__image_#{$i}{
-                background-image: url("../../assets/menu_#{$i}.jpg");
+                background-image: url("../assets/menu_#{$i}.jpg");
             }
         }
         & .card__description{
@@ -81,12 +81,13 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity: 0;
-                transition: all 1s ease-in-out;
+                transition: all 400ms ease-in-out;
+                &:hover{
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
             }
-            &:hover .fas{
-                opacity: 1;
-                transform: scale(1.1);
-            }
+ 
         }
     }
     
