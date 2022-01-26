@@ -1,5 +1,6 @@
 @import "../sass/utils/mixins";
 @import "../sass/utils/variables";
+@import "../sass/utils/animations";
 
 .image__menu img{
     display: block;
@@ -37,6 +38,7 @@
             &:hover{
                 opacity: 1;
                 transform: scale(1.1);
+                cursor: pointer;
             }
         }
     }
@@ -44,42 +46,93 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 20px 20px 50px 20px;
         @media screen and (min-width: 991px){
             flex-direction: row;
-        }        
+        }  
         & .menu__flex {
+
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             gap: 25px;
             & h3{
                 font-weight: 200;
+                position: relative;
+                &::after{
+                    content:"";
+                    background-color: $color_tertiary;
+                    height: 5px;
+                    width: 46px;
+                    position: absolute;
+                    top: 25px;
+                    left: 0px;
+                }
             }
             & .menu_item{
+                @for $i from 1 through 5{
+                    &:nth-child(#{$i}){
+                        animation-delay: 200ms * $i;
+                    }
+                }
                 display: flex;
                 background-color: white;
                 border-radius: 20px;
-                align-items:flex-end;
+                overflow: hidden;
                 @include base_shadow;
-                &:hover{
-                   //l'animation
+                animation: appear 1s;
+                animation-fill-mode: both;
+                &:hover{ 
+                    cursor: pointer;
+                   & .menu_item__check-box{
+                   margin-right: 0px;
+                   }
+                   & i{
+                       animation: spin 900ms;
+                   }
                 }
                 & .menu_item__content{
                     padding:10px;
+                    @include ellipsis;
                     & h4{
                         font-weight: 600;
                         padding-bottom: 7px;
+                        @include ellipsis;
                     }
                     & p{
                         font-size: 12px;
+                        @include ellipsis;
                     }
                 }
                 & .menu_item__price{
+                    display: flex;
+                    align-items:flex-end;
                     margin: 10px 20px 10px auto;
                     font-weight: 900;
                 }
+                & .menu_item__check-box{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    background-color: $color_tertiary;
+                    margin-right: -70px;
+                    width: 70px;
+                    transition: margin-right 1s;
+                    & .fas{
+                        font-size: 27px;
+                        color: white;
+                    }
+                }
             }
+        }
+    }
+    
+    & .order{
+        text-align: center;
+        padding-bottom: 90px;
+        & .order__btn{
+        @include button;
         }
     }
 }

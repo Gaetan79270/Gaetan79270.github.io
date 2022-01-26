@@ -26,12 +26,25 @@ h3, h4, p {
 }
 
 header {
+  display: flex;
   font-family: "Shrikhand", cursive;
-  text-align: center;
+  justify-content: center;
   box-shadow: 0px 3px 1px #d1d1d1;
   padding: 1px;
   position: relative;
   width: 100%;
+}
+header i {
+  display: inline-block;
+  position: absolute;
+  top: 28px;
+  left: 25px;
+  color: #444444;
+  font-size: 40px;
+  transition: 800ms;
+}
+header i:hover {
+  transform: scale(1.1);
 }
 
 .research {
@@ -87,6 +100,7 @@ input::placeholder {
   transform: scale(1.04);
   transition: transform 700ms;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .functioning {
@@ -288,6 +302,24 @@ footer h2 {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .image__menu img {
   display: block;
   width: 100%;
@@ -327,12 +359,13 @@ footer h2 {
 .menu_list .menu_list__title .fas:hover {
   opacity: 1;
   transform: scale(1.1);
+  cursor: pointer;
 }
 .menu_list .menu {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
 }
 @media screen and (min-width: 991px) {
   .menu_list .menu {
@@ -347,27 +380,108 @@ footer h2 {
 }
 .menu_list .menu .menu__flex h3 {
   font-weight: 200;
+  position: relative;
+}
+.menu_list .menu .menu__flex h3::after {
+  content: "";
+  background-color: #99E2D0;
+  height: 5px;
+  width: 46px;
+  position: absolute;
+  top: 25px;
+  left: 0px;
 }
 .menu_list .menu .menu__flex .menu_item {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  align-items: flex-end;
+  overflow: hidden;
   box-shadow: 0px 8px 5px -2px lightgrey;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+.menu_list .menu .menu__flex .menu_item:nth-child(1) {
+  animation-delay: 200ms;
+}
+.menu_list .menu .menu__flex .menu_item:nth-child(2) {
+  animation-delay: 400ms;
+}
+.menu_list .menu .menu__flex .menu_item:nth-child(3) {
+  animation-delay: 600ms;
+}
+.menu_list .menu .menu__flex .menu_item:nth-child(4) {
+  animation-delay: 800ms;
+}
+.menu_list .menu .menu__flex .menu_item:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.menu_list .menu .menu__flex .menu_item:hover {
+  cursor: pointer;
+}
+.menu_list .menu .menu__flex .menu_item:hover .menu_item__check-box {
+  margin-right: 0px;
+}
+.menu_list .menu .menu__flex .menu_item:hover i {
+  animation: spin 900ms;
 }
 .menu_list .menu .menu__flex .menu_item .menu_item__content {
   padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_list .menu .menu__flex .menu_item .menu_item__content h4 {
   font-weight: 600;
   padding-bottom: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_list .menu .menu__flex .menu_item .menu_item__content p {
   font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_list .menu .menu__flex .menu_item .menu_item__price {
+  display: flex;
+  align-items: flex-end;
   margin: 10px 20px 10px auto;
   font-weight: 900;
+}
+.menu_list .menu .menu__flex .menu_item .menu_item__check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #99E2D0;
+  margin-right: -70px;
+  width: 70px;
+  transition: margin-right 1s;
+}
+.menu_list .menu .menu__flex .menu_item .menu_item__check-box .fas {
+  font-size: 27px;
+  color: white;
+}
+.menu_list .order {
+  text-align: center;
+  padding-bottom: 90px;
+}
+.menu_list .order .order__btn {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  background-image: linear-gradient(350deg, #9356DC, #FF79DA);
+  box-shadow: 0px 8px 5px -2px lightgrey;
+}
+.menu_list .order .order__btn:hover {
+  transform: scale(1.04);
+  transition: transform 700ms;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

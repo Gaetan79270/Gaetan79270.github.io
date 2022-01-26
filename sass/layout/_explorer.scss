@@ -13,17 +13,6 @@
         padding-bottom: 30px;
     }
     & button{
-        color: white;
-        font-size: 18px;
-        font-weight: 300;
-        padding: 15px 25px;
-        border: none;
-        border-radius: 30px;
-        @include gradient;
-        @include base-shadow;
-        &:hover{
-            @include zoom;
-            opacity: 0.8;
-        }
+    @include button;
     }
 }
