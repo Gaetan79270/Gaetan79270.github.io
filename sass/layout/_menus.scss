@@ -77,7 +77,7 @@
             }
             & .fas{
                 color: transparent;
-                @include gradient;
+                @include gradient_heart;
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity: 0;
