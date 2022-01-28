@@ -17,3 +17,20 @@
         opacity: 1;
     }
 }
+
+@keyframes loader{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes spinner{
+    0%{
+        transform: 0;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
