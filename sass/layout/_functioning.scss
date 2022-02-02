@@ -38,9 +38,11 @@
         }
         &:hover{
             @include zoom;
+            background-color: #eae3f2;
             & i{
                  color: $color_primary; 
             }
+            
         }
         &::before{
             content: "" counter(steps);

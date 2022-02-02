@@ -12,6 +12,9 @@
         font-weight: 200;
         padding-bottom: 30px;
     }
+    & .explorer__button{
+        margin: 20px 0px 100px 0px;
+    }
     & button{
     @include button;
     }

@@ -86,6 +86,9 @@ input::placeholder {
   font-weight: 200;
   padding-bottom: 30px;
 }
+.explorer .explorer__button {
+  margin: 20px 0px 100px 0px;
+}
 .explorer button {
   color: white;
   font-size: 18px;
@@ -144,6 +147,7 @@ input::placeholder {
 .functioning li:hover {
   transform: scale(1.04);
   transition: transform 700ms;
+  background-color: #eae3f2;
 }
 .functioning li:hover i {
   color: #9356DC;
