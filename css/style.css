@@ -37,10 +37,10 @@ header {
 header i {
   display: inline-block;
   position: absolute;
-  top: 28px;
+  top: 34px;
   left: 25px;
   color: #444444;
-  font-size: 40px;
+  font-size: 28px;
   transition: 800ms;
 }
 header i:hover {
@@ -126,7 +126,6 @@ input::placeholder {
   }
 }
 .functioning li {
-  position: relative;
   counter-increment: steps;
   flex-grow: 1;
   padding: 16px 0px;
@@ -156,13 +155,12 @@ input::placeholder {
   content: "" counter(steps);
   color: white;
   background-color: #9356DC;
-  padding: 4px 8px;
+  padding: 3px 7px;
   border-radius: 50%;
   font-size: 14px;
   font-weight: 500;
-  position: absolute;
-  bottom: 23px;
-  left: -10px;
+  position: relative;
+  right: 13px;
 }
 
 .restaurants {
@@ -334,7 +332,7 @@ footer h2 {
 }
 @keyframes spinner {
   0% {
-    transform: 0;
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -361,10 +359,11 @@ footer h2 {
 }
 .menu_list .menu_list__title h2 {
   padding: 20px;
+  font-size: 18px;
 }
 .menu_list .menu_list__title i {
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 20px;
   font-size: 35px;
 }
@@ -538,7 +537,7 @@ footer h2 {
 }
 @keyframes spinner {
   0% {
-    transform: 0;
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);

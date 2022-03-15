@@ -19,7 +19,7 @@
         
     }
     & li{
-        position: relative;
+        //position: relative;
         counter-increment: steps;
         flex-grow: 1;
         padding: 16px 0px;
@@ -48,13 +48,12 @@
             content: "" counter(steps);
             color:white;
             background-color: $color_primary;
-            padding: 4px 8px;
+            padding: 3px 7px;
             border-radius: 50%;
             font-size: 14px;
             font-weight: 500;
-            position: absolute;
-            bottom: 23px;
-            left: -10px;
+            position: relative;
+            right: 13px;
         }
     }
 }
